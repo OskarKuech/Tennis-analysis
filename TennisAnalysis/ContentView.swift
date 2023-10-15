@@ -2,20 +2,15 @@
 //  ContentView.swift
 //  TennisAnalysis
 //
-//  Created by Oskar Küch on 06.10.23.
+//  Created by Oskar Küch on 14.10.23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        DashboardView()
+            .statusBarHidden(true)
     }
 }
 
