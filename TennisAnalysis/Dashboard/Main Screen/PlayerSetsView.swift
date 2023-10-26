@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PlayerSetsView: View {
-    let player1: String
-    let player2: String
+    @Binding var player1name: String
+    @Binding var player2name: String
     let player1Set1: String
     let player1Set2: String
     let player2Set1: String
@@ -20,7 +20,8 @@ struct PlayerSetsView: View {
                 Circle()
                     .fill(.textRed)
                     .frame(height:15)
-                Text(player1)
+                Text(player1name)
+                    .underline()
                 Spacer()
                 Text(player1Set1)
                 Text(player1Set2)
@@ -32,7 +33,7 @@ struct PlayerSetsView: View {
                 Circle()
                     .fill(.textGreen)
                     .frame(height:15)
-                Text(player2)
+                Text(player2name)
                 Spacer()
                 Text(player2Set1)
                 Text(player2Set2)
@@ -41,7 +42,7 @@ struct PlayerSetsView: View {
         .frame(maxWidth: 200)
     }
 }
-
-#Preview {
-    PlayerSetsView(player1: "Player 1", player2: "Player 2", player1Set1: "4", player1Set2: "0", player2Set1: "4", player2Set2: "0")
-}
+//
+//#Preview {
+//    PlayerSetsView(player1name: player1name, player2name: player2name, player1Set1: "4", player1Set2: "0", player2Set1: "4", player2Set2: "0")
+//}

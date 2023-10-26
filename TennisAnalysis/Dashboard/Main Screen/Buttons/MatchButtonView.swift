@@ -11,6 +11,7 @@ struct MatchButtonView: View {
     var body: some View {
         HStack{
             MatchButtonsCreationView(label: "Server")
+//            MatchButtonServerView()
             MatchButtonsCreationView(label: "Receiver")
             MatchButtonsCreationView(label: "Double Fault")
             MatchButtonsCreationView(label: "Ace")
@@ -21,3 +22,4 @@ struct MatchButtonView: View {
 #Preview {
     MatchButtonView()
 }
+

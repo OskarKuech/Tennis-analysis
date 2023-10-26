@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @State var player1name: String = ""
+    @State var player2name: String = ""
+    
     var body: some View {
             HStack(spacing:20){
                 VStack(spacing:10){
@@ -23,8 +26,7 @@ struct DashboardView: View {
 //                            .cornerRadius(15)
 //                            .scaledToFill())
                     Spacer()
-                    MainScreenView()
-//                        .frame(height:450)
+                    MainScreenView(player1name: player1name, player2name: player2name)
                         
                 }
                 StatisticsView()

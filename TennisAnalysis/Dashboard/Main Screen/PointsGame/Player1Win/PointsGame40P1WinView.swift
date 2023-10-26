@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct PointsGame40P1WinView: View {
+struct PointsGame40P1WinView: View, Hashable {
+func hash(into hasher: inout Hasher){
+}
     var body: some View {
         VStack{
             Rectangle()

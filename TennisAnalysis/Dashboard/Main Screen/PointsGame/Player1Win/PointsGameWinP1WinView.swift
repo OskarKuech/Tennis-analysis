@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PointsGameWinP1WinView: View {
+func hash(into hasher: inout Hasher){
+}
     var body: some View {
         VStack{
             Rectangle()

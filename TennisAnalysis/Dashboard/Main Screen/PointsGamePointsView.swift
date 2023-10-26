@@ -8,47 +8,27 @@
 import SwiftUI
 
 struct PointsGamePointsView: View {
+    @State private var viewState: ViewState = .noView
+    @State private var winViews: [AnyView] = []
+
     var body: some View {
-        HStack(spacing:0){
+        HStack(spacing: 0) {
             Rectangle()
-                .frame(width:3, height:250)
+                .frame(width: 3, height: 250)
             ScrollView(.horizontal) {
-                HStack{
-                    VStack(alignment:.leading){
-                        HStack(alignment:.bottom){
-                            PointsGame0P1View()
-                            PointsGame15P1WinView()
-                            PointsGame30P1WinView()
-                            PointsGame40P1WinView()
-                            PointsGame40P1View()
-                            PointsGame40P1View()
-                            PointsGameADP1WinView()
-                            PointsGame40P1View()
-                            PointsGame40P1View()
-                            PointsGame40P1View()
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack(alignment: .bottom) {
+                            // Player1
+
                         }
                         .padding(.bottom, 5)
-                        //                Rectangle()
-                        //                    .fill(.backgroundLightest)
-                        //                    .frame(height: 3)
                         
-                        HStack(alignment:.top){
-                            PointsGame15P2WinView()
-                            PointsGame15P2View()
-                            PointsGame15P2View()
-                            PointsGame15P2View()
-                            PointsGame30P2WinView()
-                            PointsGame40P2WinView()
-                            PointsGame40P2View()
-                            PointsGame40P2WinView()
-                            PointsGameADP2WinView()
-                            PointsGameWin2WinView()
+                        HStack(alignment: .top) {
+                            // Player2
                         }
                         .padding(.top, 5)
                     }
-                    
-                    Set3WinP2Wins2_1View()
-                        .padding()
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -56,6 +36,31 @@ struct PointsGamePointsView: View {
     }
 }
 
+
 #Preview {
     PointsGamePointsView()
 }
+
+
+//                            PointsGame0P1View()
+//                            PointsGame15P1WinView()
+//                            PointsGame30P1WinView()
+//                            PointsGame40P1WinView()
+//                            PointsGame40P1View()
+//                            PointsGame40P1View()
+//                            PointsGameADP1WinView()
+//                            PointsGame40P1View()
+//                            PointsGame40P1View()
+//                            PointsGame40P1View()
+
+
+//                            PointsGame15P2WinView()
+//                            PointsGame15P2View()
+//                            PointsGame15P2View()
+//                            PointsGame15P2View()
+//                            PointsGame30P2WinView()
+//                            PointsGame40P2WinView()
+//                            PointsGame40P2View()
+//                            PointsGame40P2WinView()
+//                            PointsGameADP2WinView()
+//                            PointsGameWin2WinView()
